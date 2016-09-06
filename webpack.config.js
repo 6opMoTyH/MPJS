@@ -1,12 +1,11 @@
-
 module.exports = {
-    entry: "./src/index.js",
+    entry: __dirname + "./src/index.js",
     output: {
         path: __dirname,
         filename: "./public/app.js"
     },
     module: {
-        loaders: [
+            loaders: [
             {
                 test: /\.js$/,
                 exclude: /(node_modules|bower_components)/,
