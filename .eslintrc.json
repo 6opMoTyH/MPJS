@@ -3,12 +3,14 @@
     "extends": "airbnb",
     "plugins": [
         "import",
-        "angular"
+        "angular",
+        "promise"
     ],
     "settings": {
         "angular": 2
     },
     "rules": {
-        "angular/no-inline-template": 2
+        "angular/no-inline-template": 2,
+        "promise/promise-newline": 2
     }
 }
