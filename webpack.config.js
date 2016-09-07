@@ -9,6 +9,13 @@ module.exports = {
         filename: "./public/app.js"
     },
     module: {
+        preLoaders: [
+            {
+                test: /\.js$/,
+                loader: 'eslint',
+                include: path.resolve(__dirname, 'src/')
+            }
+        ],
         loaders: [
             {
                 test: /\.js$/,
