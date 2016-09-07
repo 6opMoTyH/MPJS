@@ -1,0 +1,14 @@
+{
+	"parser": "babel-eslint",
+    "extends": "airbnb",
+    "plugins": [
+        "import",
+        "angular"
+    ],
+    "settings": {
+    	"angular": 2
+    },
+    "rules": {
+    	"angular/no-inline-template": 2
+    }
+}
