@@ -1,4 +1,4 @@
-export class Greeter {
+export default class {
   say(greeting, name) {
     const capitalized = this.capitalize(greeting);
     return `${capitalized}, ${name}!`;
