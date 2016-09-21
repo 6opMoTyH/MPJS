@@ -3,7 +3,6 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import 'rxjs/add/operator/map';
-
 import { default as Greeter } from './services';
 
 @Component({
@@ -35,10 +34,7 @@ export class Ciao {
 })
 export class Linker {
   @Input() url;
-
-  constructor(@Attribute('name') name) {
-    this.name = name;
-  }
+  @Attribute('name') name;
 }
 
 @Component({
