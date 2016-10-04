@@ -1,12 +1,12 @@
 /* eslint-env jasmine */
-import { Component } from '@angular/core';
+import Component from '@angular/core';
 import { ActivatedRoute, UrlSegment } from '@angular/router';
-import { TestBed } from '@angular/core/testing';
-import { Observable } from 'rxjs/Observable';
+import TestBed from '@angular/core/testing';
+import Observable from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 
-import { Greeter } from './services';
-import { Hello, Ciao, Linker } from './app';
+import Greeter from './../src/services';
+import { Hello, Ciao, Linker } from './../src/app';
 
 describe('Hello', () => {
   it('renders greeting', () => {
