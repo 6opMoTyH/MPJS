@@ -1,4 +1,4 @@
-import { NgModule, Component, Input, Attribute } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { ActivatedRoute, RouterModule } from '@angular/router';
@@ -29,18 +29,6 @@ export class Bye {
 }
 
 @Component({
-  selector: 'linker',
-  template: '<p>' +
-                '<a [href]="url" [title]="name">{{ name }}</a>' +
-            '</p>',
-})
-
-export class Linker {
-  @Input() url;
-  @Attribute('name') name;
-}
-
-@Component({
   selector: 'hello-app',
   template: `
   <ul>
@@ -68,7 +56,6 @@ const routing = RouterModule.forRoot([
     HelloApp,
     Hello,
     Bye,
-    Linker,
   ],
   providers: [
     Greeter,
