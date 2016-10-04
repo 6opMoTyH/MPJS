@@ -3,8 +3,6 @@ This is test project, main idea of which is creation best FE based javascript CM
 
 ## How to use
 
-## Installation
-
 ```sh
 $ npm install
 $ npm run build
