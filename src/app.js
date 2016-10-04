@@ -9,6 +9,7 @@ import { default as Greeter } from './services';
   selector: 'hello',
   template: '<p>{{ message }}</p>',
 })
+
 export class Hello {
   constructor(greeter:Greeter) {
     this.message = greeter.say('hello', 'Angular 2');
@@ -16,10 +17,11 @@ export class Hello {
 }
 
 @Component({
-  selector: 'ciao',
+  selector: 'Bye',
   template: '<p>{{ message$ | async }}</p>',
 })
-export class Ciao {
+
+export class Bye {
   constructor(greeter:Greeter, route:ActivatedRoute) {
     this.message$ = route.params
     .map(params => greeter.say('Bye', params.name));
@@ -29,9 +31,10 @@ export class Ciao {
 @Component({
   selector: 'linker',
   template: '<p>' +
-  '<a [href]="url" [title]="name">{{ name }}</a>' +
-  '</p>',
+                '<a [href]="url" [title]="name">{{ name }}</a>' +
+            '</p>',
 })
+
 export class Linker {
   @Input() url;
   @Attribute('name') name;
@@ -41,18 +44,19 @@ export class Linker {
   selector: 'hello-app',
   template: `
   <ul>
-  <li><a [routerLink]="['/']">Hello</a></li>
-  <li><a [routerLink]="['/ciao', 'ng2']">Bye</a></li>
+    <li><a [routerLink]="['/']">Hello</a></li>
+    <li><a [routerLink]="['/bye', 'ng2']">Bye</a></li>
   </ul>
   <router-outlet></router-outlet>
   `,
 })
+
 export class HelloApp {
 }
 
 const routing = RouterModule.forRoot([
   { path: '', component: Hello },
-  { path: 'ciao/:name', component: Ciao },
+  { path: 'bye/:name', component: Bye },
 ]);
 
 @NgModule({
@@ -63,7 +67,7 @@ const routing = RouterModule.forRoot([
   declarations: [
     HelloApp,
     Hello,
-    Ciao,
+    Bye,
     Linker,
   ],
   providers: [
