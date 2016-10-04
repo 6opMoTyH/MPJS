@@ -8,6 +8,6 @@ This is test project, main idea of which is creation best FE based javascript CM
 ```sh
 $ npm install
 $ npm run build
-$ npm run serve
+$ npm run server
 ```
 #### open http://localhost:8080/ in browser
